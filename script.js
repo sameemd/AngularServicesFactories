@@ -25,9 +25,6 @@ angular.module('myapp', [])
     this.getValue = function() {
       return ++x;
     };
-    this.getUsers = function() {
-      return $http.get('https://api.github.com/users');
-    };
   }])
   .service('myFactory', ['$http', function($http) {
     a += 1;
@@ -35,10 +32,6 @@ angular.module('myapp', [])
       y:++a,
       getValue : function() {
         return this.y;
-      },
-      getUsers: function() {
-        return $http.get('https://api.github.com/users');
       }
     };
-
   }]);
